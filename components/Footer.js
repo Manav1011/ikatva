@@ -1,31 +1,8 @@
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import styles from './Footer.module.css';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Footer = () => {
-  const footerRef = useRef(null);
-
-  useEffect(() => {
-    const footer = footerRef.current;
-    
-    gsap.from(footer.children, {
-      scrollTrigger: {
-        trigger: footer,
-        start: 'top 90%',
-      },
-      opacity: 0,
-      y: 30,
-      duration: 1,
-      stagger: 0.2,
-      ease: 'power2.out'
-    });
-  }, []);
-
   return (
-    <footer ref={footerRef} className={styles.footer}>
+    <footer className={styles.footer}>
       <div className={styles.newsletter}>
         <h2 className={styles.newsTitle}>Join the IKATVA Community</h2>
         <p className={styles.newsSub}>Get early access to new collections and artisan stories.</p>

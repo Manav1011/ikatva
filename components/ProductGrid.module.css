@@ -8,8 +8,9 @@
   text-align: center;
   font-size: 3rem;
   margin-bottom: 80px;
-  font-family: var(--font-cormorant);
-  letter-spacing: -1px;
+  font-family: var(--font-playfair), serif;
+  letter-spacing: 0.5px;
+  font-weight: 500;
 }
 
 .grid {
