@@ -162,16 +162,21 @@
 
 .viewAll {
   padding: 15px 50px;
-  background-color: var(--charcoal-black);
+  background-color: var(--heritage-indigo);
   color: var(--white);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid var(--antique-gold);
 }
 
 .viewAll:hover {
   background-color: var(--deep-maroon);
+  border-color: var(--antique-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(122, 31, 42, 0.2);
 }
 
 @media (max-width: 1024px) {
