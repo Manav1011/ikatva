@@ -27,6 +27,7 @@ html.has-scroll-dragging {
   --charcoal-black: #2A2A2A; /* Darker charcoal text */
   --white: #ffffff;
   --footer-bg: #1a1512; /* Rich dark brown, warmer than charcoal */
+  --gold-soft: rgba(198, 167, 105, 0.15);
 }
 
 * {

@@ -1,6 +1,7 @@
 .section {
   padding: 120px 5%;
   background-color: var(--white);
+  border-top: 1px solid var(--gold-soft);
 }
 
 .title {
