@@ -96,7 +96,7 @@
 }
 
 .quickView {
-  padding: 12px 25px;
+  padding: 12px 28px;
   background-color: var(--white);
   color: var(--charcoal-black);
   font-size: 0.8rem;
@@ -110,16 +110,24 @@
 .quickView:hover {
   background-color: transparent;
   color: var(--white);
+  border-color: var(--antique-gold);
 }
 
 .addToCart {
-  padding: 12px 25px;
+  padding: 12px 28px;
   background-color: var(--deep-maroon);
   color: var(--white);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 600;
+  border: 1px solid var(--deep-maroon);
+  transition: all 0.3s ease;
+}
+
+.addToCart:hover {
+  background-color: var(--antique-gold);
+  border-color: var(--antique-gold);
 }
 
 .craftLabel {
