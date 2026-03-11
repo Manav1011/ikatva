@@ -3,6 +3,19 @@
   background-color: var(--white);
   border-top: 1px solid rgba(0,0,0,0.05);
   text-align: center;
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/linen.png');
+  opacity: 0.04;
+  pointer-events: none;
 }
 
 .content {
@@ -46,8 +59,8 @@
 .mapImage {
   width: 100%;
   height: auto;
-  opacity: 0.8;
-  filter: sepia(0.2) contrast(0.9);
+  opacity: 0.85;
+  filter: sepia(0.15) contrast(0.95);
 }
 
 .marker {
