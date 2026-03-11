@@ -30,6 +30,8 @@
 
 .card:hover .imageBox {
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  outline: 1px solid var(--gold-soft);
+  outline-offset: 4px;
 }
 
 .img {
