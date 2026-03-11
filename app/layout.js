@@ -1,5 +1,6 @@
 import { Cormorant_Garamond, Playfair_Display, Bodoni_Moda } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "../components/SmoothScroll";
 
 const cormorant = Cormorant_Garamond({ 
   subsets: ["latin"], 
@@ -13,8 +14,8 @@ const playfair = Playfair_Display({
 });
 const bodoni = Bodoni_Moda({
   subsets: ["latin"],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-bodoni'
+  variable: '--font-bodoni',
+  adjustFontFallback: false
 });
 
 export const metadata = {
@@ -26,7 +27,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${cormorant.variable} ${playfair.variable} ${bodoni.variable}`}>
-        {children}
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

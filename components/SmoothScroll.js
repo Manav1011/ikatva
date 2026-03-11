@@ -1,36 +1,44 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
+import Lenis from 'lenis';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const SmoothScroll = ({ children }) => {
-  const scrollRef = useRef(null);
+  useLayoutEffect(() => {
+    // Register GSAP plugins
+    gsap.registerPlugin(ScrollTrigger);
 
-  useEffect(() => {
-    let scroll;
-    import('locomotive-scroll').then((locomotiveModule) => {
-      scroll = new locomotiveModule.default({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.1, // Smoother interpolation
-        multiplier: 1.0, // Natural scroll speed
-        touchMultiplier: 3.0,
-        tablet: { smooth: true },
-        smartphone: { smooth: false },
-      });
-
-      // Update scroll when height changes
-      new ResizeObserver(() => scroll.update()).observe(scrollRef.current);
+    // Initialize Lenis
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
     });
 
+    // Sync ScrollTrigger with Lenis
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
+    // Clean up
     return () => {
-      if (scroll) scroll.destroy();
+      lenis.destroy();
+      gsap.ticker.remove(lenis.raf);
     };
   }, []);
 
-  return (
-    <div data-scroll-container ref={scrollRef}>
-      {children}
-    </div>
-  );
+  return children;
 };
 
 export default SmoothScroll;

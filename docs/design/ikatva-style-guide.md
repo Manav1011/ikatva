@@ -64,6 +64,25 @@ IKATVA should evoke the feeling of:
 
 ---
 
+## 🖋️ Typography
+
+### 1. The Heritage Header (Primary Serif)
+**Font:** [Cormorant Garamond](https://fonts.google.com/specimen/Cormorant+Garamond)
+- **Vibe:** Sharp, regal, and historic.
+- **Use for:** Main headlines, product names, and "Heritage" section titles.
+
+### 2. The Modern Guide (Primary Sans-Serif)
+**Font:** [Outfit](https://fonts.google.com/specimen/Outfit)
+- **Vibe:** Clean, geometric, and perfectly readable.
+- **Use for:** Navigation, buttons, prices, and long body text.
+
+### 3. The Artisan’s Voice (Decorative Script)
+**Font:** [Great Vibes](https://fonts.google.com/specimen/Great+Vibes)
+- **Vibe:** Warm, personal, and handwritten.
+- **Use for:** Small artisan quotes, "Handmade" annotations, and decorative accents.
+
+---
+
 ## Full Palette Summary (HEX Codes)
 ```text
 Heritage Ivory     #F5EFE6
