@@ -1,0 +1,187 @@
+.section {
+  padding: 120px 5%;
+  background-color: var(--white);
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 80px;
+  font-family: var(--font-cormorant);
+  letter-spacing: -1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.imageBox {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  margin-bottom: 25px;
+  background-color: var(--heritage-ivory);
+  transition: box-shadow 0.4s ease;
+}
+
+.card:hover .imageBox {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.5s ease;
+}
+
+.imgDetail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover .img {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.card:hover .imgDetail {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(42, 42, 42, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 5;
+  gap: 15px;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.quickView {
+  padding: 12px 25px;
+  background-color: var(--white);
+  color: var(--charcoal-black);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  border: 1px solid var(--white);
+  transition: all 0.3s ease;
+}
+
+.quickView:hover {
+  background-color: transparent;
+  color: var(--white);
+}
+
+.addToCart {
+  padding: 12px 25px;
+  background-color: var(--deep-maroon);
+  color: var(--white);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.craftLabel {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 6px 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--deep-maroon);
+  z-index: 2;
+}
+
+.productInfo {
+  text-align: center;
+}
+
+.prodName {
+  font-family: var(--font-playfair), 'Playfair Display', serif;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  color: var(--charcoal-black);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.prodPrice {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--deep-maroon);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.viewAllWrapper {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.viewAll {
+  padding: 15px 50px;
+  background-color: var(--charcoal-black);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.viewAll:hover {
+  background-color: var(--deep-maroon);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    gap: 15px;
+  }
+}
