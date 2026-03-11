@@ -1,0 +1,208 @@
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--white);
+  padding: 100px 5% 40px;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--antique-gold), transparent);
+  opacity: 0.4;
+}
+
+.newsletter {
+  text-align: center;
+  margin-bottom: 100px;
+  max-width: 600px;
+  margin: 0 auto 100px;
+}
+
+.newsTitle {
+  color: var(--white);
+  font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.newsSub {
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+
+.newsForm {
+  display: flex;
+  gap: 15px;
+}
+
+.benefits {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 80px;
+  padding: 40px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--antique-gold);
+}
+
+.benefIcon {
+  font-size: 1rem;
+}
+
+.ornamentDivider {
+  width: 150px;
+  height: 2px;
+  background-color: var(--antique-gold);
+  margin: 0 auto 80px;
+  position: relative;
+}
+
+.ornamentDivider::after, .ornamentDivider::before {
+  content: '✦';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--antique-gold);
+  background-color: var(--footer-bg);
+  padding: 0 10px;
+}
+
+.ornamentDivider::before { left: -20px; }
+.ornamentDivider::after { right: -20px; }
+
+.input {
+  flex: 1;
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.input::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+.btn {
+  background-color: var(--deep-maroon);
+  color: var(--white);
+  padding: 12px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--antique-gold);
+}
+
+.mainFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.colLarge {
+  flex: 2;
+  max-width: 500px;
+}
+
+.col {
+  flex: 1;
+}
+
+.logo {
+  font-family: var(--font-cormorant);
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: var(--white);
+  letter-spacing: -1px;
+}
+
+.mission {
+  opacity: 0.7;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.pillars {
+  display: flex;
+  gap: 20px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.5;
+}
+
+.title {
+  color: var(--white);
+  font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.links {
+  list-style: none;
+  opacity: 0.7;
+}
+
+.links li {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.links li:hover {
+  color: var(--antique-gold);
+}
+
+.bottomBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  opacity: 0.5;
+  font-size: 0.85rem;
+}
+
+.social {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 1024px) {
+  .mainFooter {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .mainFooter {
+    grid-template-columns: 1fr;
+  }
+}
