@@ -1,5 +1,5 @@
 .section {
-  padding: 120px 5%;
+  padding: 140px 5%;
   background-color: var(--white);
   border-top: 1px solid var(--gold-soft);
 }
@@ -126,14 +126,15 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 8px 14px;
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   color: var(--deep-maroon);
   z-index: 2;
+  border-left: 2px solid var(--antique-gold);
 }
 
 .productInfo {
