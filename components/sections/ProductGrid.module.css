@@ -5,12 +5,25 @@
 }
 
 .title {
-  text-align: center;
-  font-size: 3rem;
+  text-align: left;
+  font-size: 3.5rem;
   margin-bottom: 80px;
   font-family: var(--font-playfair), serif;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
   font-weight: 500;
+  position: relative;
+  max-width: 600px;
+  color: var(--deep-maroon);
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 120px;
+  height: 1px;
+  background-color: var(--antique-gold);
 }
 
 .grid {

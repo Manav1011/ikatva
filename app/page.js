@@ -25,7 +25,6 @@ export default function Home() {
       <main className={styles.main}>
         <div><Hero /></div>
         <div><CategoryNav /></div>
-        <div><MediaLogos /></div>
         <div><CategoryGrid /></div>
         <div><ArtisanSection /></div>
         <div><ProductGrid title="Heritage Best Sellers" products={bestSellers} /></div>

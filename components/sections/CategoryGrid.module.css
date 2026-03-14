@@ -1,5 +1,5 @@
 .container {
-  padding: 160px 8%;
+  padding: 60px 8% 120px; /* Reduced top padding from 160px */
   background-color: var(--white);
   overflow: hidden;
 }
