@@ -31,7 +31,6 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className={styles.ornamentDivider}></div>
 
       <div className={styles.mainFooter}>
         <div className={styles.colLarge}>

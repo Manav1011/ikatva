@@ -16,8 +16,14 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 80px 40px;
+  padding-top: 40px;
 }
+
+.card:nth-child(even) {
+  transform: translateY(40px);
+}
+
 
 .imageBox {
   position: relative;
@@ -25,21 +31,48 @@
   aspect-ratio: 4 / 5;
   overflow: hidden;
   margin-bottom: 25px;
-  background-color: var(--heritage-ivory);
-  transition: box-shadow 0.4s ease;
+  background-color: #f7f3ed;
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 
+    0 5px 15px rgba(0,0,0,0.03),
+    inset 0 0 60px rgba(0,0,0,0.03);
+  border: 1px solid var(--gold-soft);
+}
+
+
+.imageBox::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 1px solid rgba(198, 167, 105, 0.2);
+  z-index: 3;
+  pointer-events: none;
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .card:hover .imageBox {
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-  outline: 1px solid var(--gold-soft);
-  outline-offset: 4px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(198, 167, 105, 0.4);
 }
+
+.card:hover .imageBox::before {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-color: var(--antique-gold);
+}
+
 
 .img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.5s ease;
+  transition: transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.8s ease;
 }
 
 .imgDetail {
@@ -50,29 +83,26 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transform: scale(1.1);
-  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: scale(1.15);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .card:hover .img {
-  opacity: 0.5;
-  transform: scale(1.1);
+  opacity: 0.3;
+  transform: scale(1.1) rotate(1deg);
 }
 
 .card:hover .imgDetail {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1.05) rotate(0deg);
 }
+
 
 .card {
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.card:hover {
-  transform: translateY(-5px);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .overlay {
@@ -81,70 +111,118 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(42, 42, 42, 0.4);
+  background-color: rgba(30, 42, 68, 0.15); /* Heritage Indigo tint */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: all 0.4s ease;
+  backdrop-filter: blur(0px);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   z-index: 5;
   gap: 15px;
 }
 
 .card:hover .overlay {
   opacity: 1;
+  backdrop-filter: blur(6px);
 }
 
+.quickView, .addToCart {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover .quickView {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.card:hover .addToCart {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+
 .quickView {
-  padding: 12px 28px;
+  padding: 12px 32px;
   background-color: var(--white);
   color: var(--charcoal-black);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 600;
+  font-weight: 700;
   border: 1px solid var(--white);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .quickView:hover {
   background-color: transparent;
   color: var(--white);
   border-color: var(--antique-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(198, 167, 105, 0.3);
 }
 
 .addToCart {
-  padding: 12px 28px;
+  padding: 12px 32px;
   background-color: var(--deep-maroon);
   color: var(--white);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 600;
+  font-weight: 700;
   border: 1px solid var(--deep-maroon);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 15px rgba(122, 31, 42, 0.2);
 }
 
 .addToCart:hover {
   background-color: var(--antique-gold);
   border-color: var(--antique-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(198, 167, 105, 0.4);
 }
+
 
 .craftLabel {
   position: absolute;
   top: 20px;
   left: 20px;
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 8px 14px;
-  font-size: 0.7rem;
-  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  font-size: 0.65rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   color: var(--deep-maroon);
-  z-index: 2;
+  z-index: 4;
   border-left: 2px solid var(--antique-gold);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
+
+.saleBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(122, 31, 42, 0.85);
+  backdrop-filter: blur(10px);
+  color: var(--white);
+  padding: 8px 16px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 4;
+  box-shadow: 0 4px 20px rgba(122, 31, 42, 0.3);
+}
+
+
 
 .productInfo {
   text-align: center;
@@ -166,6 +244,23 @@
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+
+.priceContainer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.originalPrice {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
+  font-size: 0.95rem;
+  color: var(--charcoal-black);
+  text-decoration: line-through;
+  opacity: 0.45;
+  font-weight: 400;
+}
+
 
 .viewAllWrapper {
   margin-top: 60px;

@@ -4,7 +4,7 @@ const ArtisanSection = () => {
   return (
     <section className={styles.container}>
       <div className={styles.imageCol}>
-        <img src="/images/artisan.png" alt="Artisan Ramesh Bhai" className={styles.image} />
+        <img src="/images/artisan2.png" alt="Artisan Ramesh Bhai" className={styles.image} />
         <div className={styles.signatureBadge}>
           <p className={styles.badgeText}>Handcrafted in Kutch<br/><span>Since 1982</span></p>
         </div>

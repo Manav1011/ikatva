@@ -6,7 +6,7 @@ const images = [
   '/images/p6.png',
   '/images/hero2.png',
   '/images/hero3.png',
-  '/images/artisan2.png',
+  '/images/artisan.png',
 ];
 
 const InstagramGrid = () => {

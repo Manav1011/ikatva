@@ -11,11 +11,12 @@ import ProductGrid from '../components/sections/ProductGrid';
 import CraftProcess from '../components/sections/CraftProcess';
 import HeritageMap from '../components/sections/HeritageMap';
 import Philosophy from '../components/sections/Philosophy';
-import InstagramGrid from '../components/sections/InstagramGrid';
 import styles from './page.module.css';
 
 // Data extraction
 import { bestSellers, newArrivals } from './data/homepage';
+import ArtisanCarousel from '../components/sections/ArtisanCarousel';
+
 
 export default function Home() {
   return (
@@ -28,11 +29,14 @@ export default function Home() {
         <div><CategoryGrid /></div>
         <div><ArtisanSection /></div>
         <div><ProductGrid title="Heritage Best Sellers" products={bestSellers} /></div>
+
         <div><CraftProcess /></div>
         <div><ProductGrid title="New Arrivals" products={newArrivals} /></div>
         <div><HeritageMap /></div>
         <div><Philosophy /></div>
-        <div><InstagramGrid /></div>
+        <div><ArtisanCarousel /></div>
+
+
       </main>
       <Footer />
     </>

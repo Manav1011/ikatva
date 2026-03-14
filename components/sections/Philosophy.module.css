@@ -1,8 +1,21 @@
 .container {
-  padding: 80px 5%;
-  background-color: var(--white);
-  border-top: 1px solid var(--sandstone-beige);
-  border-bottom: 1px solid var(--sandstone-beige);
+  padding: 0 5% 100px; /* Removed top padding to merge */
+  background-color: var(--heritage-ivory);
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .grid {
@@ -11,6 +24,8 @@
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .item {

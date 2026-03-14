@@ -1,5 +1,5 @@
 .section {
-  padding: 140px 5%;
+  padding: 140px 5% 40px; /* Reduced bottom padding */
   background-color: var(--heritage-ivory); /* Light Ivory for heritage feel */
   color: var(--charcoal-black);
   position: relative;
@@ -74,7 +74,6 @@
   justify-content: center;
   background: white;
   padding: 20px;
-  box-shadow: 0 40px 80px rgba(0,0,0,0.08);
   border: 1px solid rgba(198, 167, 105, 0.2);
 }
 
