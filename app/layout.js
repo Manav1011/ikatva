@@ -2,15 +2,15 @@ import { Cormorant_Garamond, Playfair_Display, Bodoni_Moda } from "next/font/goo
 import "./globals.css";
 import SmoothScroll from "../components/SmoothScroll";
 
-const cormorant = Cormorant_Garamond({ 
-  subsets: ["latin"], 
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-cormorant' 
+  variable: '--font-cormorant'
 });
-const playfair = Playfair_Display({ 
-  subsets: ["latin"], 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-playfair' 
+  variable: '--font-playfair'
 });
 const bodoni = Bodoni_Moda({
   subsets: ["latin"],
@@ -19,8 +19,9 @@ const bodoni = Bodoni_Moda({
 });
 
 export const metadata = {
-  title: "IKATVA | Carry Heritage. Carry IKATVA.",
-  description: "Luxury heritage brand rooted in unity through tradition and strength through culture. Handmade purses inspired by India's timeless craftsmanship.",
+  title: "IKATVA | Indian Handcrafted Luxury Purses & Heritage Leather Bags",
+  description: "IKATVA brings the soul of India's traditional arts to the world. Discover luxury handcrafted purses, leather bags, and timeless artisan-made slow fashion.",
+  keywords: "Indian handcrafted purses, traditional bags, heritage crafts, slow fashion, artisan-made products, luxury leather bags india",
 };
 
 export default function RootLayout({ children }) {

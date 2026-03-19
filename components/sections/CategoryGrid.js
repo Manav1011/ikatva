@@ -14,9 +14,9 @@ const CategoryGrid = () => {
       <h2 className={styles.sectionTitle}>Featured Collections</h2>
       <div className={styles.grid}>
         {categories.map((cat, idx) => (
-          <Link 
-            href={cat.link} 
-            key={idx} 
+          <Link
+            href={cat.link}
+            key={idx}
             className={styles.card}
           >
             <div className={styles.imageWrapper}>

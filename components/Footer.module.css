@@ -134,10 +134,23 @@
   flex: 1;
 }
 
+.footerLogoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.footerLogo {
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  /* Makes the logo white for the dark footer */
+  opacity: 0.9;
+}
+
 .logo {
   font-family: var(--font-cormorant);
   font-size: 3rem;
-  margin-bottom: 30px;
   color: var(--white);
   letter-spacing: -1px;
 }

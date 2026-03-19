@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -34,7 +35,10 @@ const Footer = () => {
 
       <div className={styles.mainFooter}>
         <div className={styles.colLarge}>
-          <h1 className={styles.logo}>IKATVA</h1>
+          <div className={styles.footerLogoWrapper}>
+            <Image src="/images/Logo.png" alt="Ikatva Logo" width={80} height={80} className={styles.footerLogo} />
+            <h1 className={styles.logo}>IKATVA</h1>
+          </div>
           <p className={styles.mission}>
             IKATVA celebrates India's timeless heritage by bringing handcrafted pieces to the modern world.
             Rooted in unity through tradition and strength through culture, we empower artisans and preserve
