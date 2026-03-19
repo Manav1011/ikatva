@@ -1,10 +1,13 @@
 .footer {
-  background-color: #0d0b0a; /* Deep charcoal midnight to match ArtisanCarousel */
-  background-image: 
-    radial-gradient(circle at 50% 0%, rgba(122, 31, 42, 0.1) 0%, transparent 50%), /* Subtle glow from top */
+  background-color: #0d0b0a;
+  /* Deep charcoal midnight to match ArtisanCarousel */
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(122, 31, 42, 0.1) 0%, transparent 50%),
+    /* Subtle glow from top */
     url("https://www.transparenttextures.com/patterns/black-linen.png");
   color: var(--white);
-  padding: 20px 5% 40px; /* Reduced top padding to merge */
+  padding: 20px 5% 40px;
+  /* Reduced top padding to merge */
   position: relative;
 }
 
@@ -13,7 +16,8 @@
 .newsletter {
   text-align: center;
   max-width: 600px;
-  margin: 0 auto 60px; /* Reduced bottom margin */
+  margin: 0 auto 60px;
+  /* Reduced bottom margin */
 }
 
 .newsTitle {
@@ -41,8 +45,8 @@
   gap: 50px;
   margin-bottom: 80px;
   padding: 40px 0;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .benefitItem {
@@ -67,7 +71,8 @@
   position: relative;
 }
 
-.ornamentDivider::after, .ornamentDivider::before {
+.ornamentDivider::after,
+.ornamentDivider::before {
   content: '✦';
   position: absolute;
   top: 50%;
@@ -77,20 +82,25 @@
   padding: 0 10px;
 }
 
-.ornamentDivider::before { left: -20px; }
-.ornamentDivider::after { right: -20px; }
+.ornamentDivider::before {
+  left: -20px;
+}
+
+.ornamentDivider::after {
+  right: -20px;
+}
 
 .input {
   flex: 1;
   background: transparent;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   color: var(--white);
   padding: 12px;
   font-size: 1rem;
 }
 
 .input::placeholder {
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .btn {
@@ -112,7 +122,7 @@
   justify-content: space-between;
   gap: 80px;
   padding-bottom: 80px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .colLarge {
@@ -190,12 +200,52 @@
 
 @media (max-width: 1024px) {
   .mainFooter {
-    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .colLarge {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .col {
+    flex: 1 1 30%;
+  }
+
+  .benefits {
+    flex-wrap: wrap;
+    gap: 30px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .mainFooter {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .colLarge {
+    text-align: center;
+  }
+
+  .pillars {
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .newsForm {
+    flex-direction: column;
+  }
+
+  .benefits {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    gap: 20px;
   }
 }

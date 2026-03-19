@@ -1,0 +1,8 @@
+# IKATVA - Robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /test-stacking/
+
+Sitemap: https://ikatva.com/sitemap.xml

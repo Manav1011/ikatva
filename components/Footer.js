@@ -36,8 +36,8 @@ const Footer = () => {
         <div className={styles.colLarge}>
           <h1 className={styles.logo}>IKATVA</h1>
           <p className={styles.mission}>
-            IKATVA celebrates India's timeless heritage by bringing handcrafted pieces to the modern world. 
-            Rooted in unity through tradition and strength through culture, we empower artisans and preserve 
+            IKATVA celebrates India's timeless heritage by bringing handcrafted pieces to the modern world.
+            Rooted in unity through tradition and strength through culture, we empower artisans and preserve
             vanishing crafts.
           </p>
           <div className={styles.pillars}>
@@ -71,6 +71,8 @@ const Footer = () => {
             <li>Returns</li>
             <li>FAQs</li>
             <li>Contact Us</li>
+            <li>Service & Policy</li>
+            <li>Terms & Conditions</li>
           </ul>
         </div>
       </div>

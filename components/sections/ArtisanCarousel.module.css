@@ -1,17 +1,21 @@
 .section {
-  min-height: 85vh; 
-  background-color: #0d0b0a; /* Deep charcoal midnight */
-  background-image: 
-    radial-gradient(circle at 50% 50%, rgba(122, 31, 42, 0.15) 0%, transparent 70%), /* Crimson glow */
-    url("https://www.transparenttextures.com/patterns/black-linen.png"); /* Silk/Linen texture */
+  min-height: 85vh;
+  background-color: #0d0b0a;
+  /* Deep charcoal midnight */
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(122, 31, 42, 0.15) 0%, transparent 70%),
+    /* Crimson glow */
+    url("https://www.transparenttextures.com/patterns/black-linen.png");
+  /* Silk/Linen texture */
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
-  perspective: 2000px; 
+  justify-content: center;
+  perspective: 2000px;
   position: relative;
-  padding: 40px 0 0; /* No bottom padding to merge with footer */
+  padding: 40px 0 0;
+  /* No bottom padding to merge with footer */
 }
 
 .decorativeElements {
@@ -24,7 +28,8 @@
   z-index: 1;
 }
 
-.patternLeft, .patternRight {
+.patternLeft,
+.patternRight {
   position: absolute;
   top: 50%;
   width: 500px;
@@ -32,8 +37,9 @@
   background-image: url("https://www.transparenttextures.com/patterns/floral-motif.png");
   background-size: 300px;
   background-repeat: repeat;
-  opacity: 0.1; 
-  filter: sepia(1) saturate(0.5) brightness(0.4) invert(0.1); /* Darker, ghost-like */
+  opacity: 0.1;
+  filter: sepia(1) saturate(0.5) brightness(0.4) invert(0.1);
+  /* Darker, ghost-like */
 }
 
 .patternLeft {
@@ -48,7 +54,8 @@
   mask-image: linear-gradient(to left, black, transparent);
 }
 
-.quoteLeft, .quoteRight {
+.quoteLeft,
+.quoteRight {
   position: absolute;
   top: 50%;
   font-family: var(--font-playfair), serif;
@@ -76,8 +83,13 @@
 }
 
 @keyframes glideText {
-  0% { transform: translateY(-53%) rotate(180deg); }
-  100% { transform: translateY(-47%) rotate(180deg); }
+  0% {
+    transform: translateY(-53%) rotate(180deg);
+  }
+
+  100% {
+    transform: translateY(-47%) rotate(180deg);
+  }
 }
 
 /* Gold Threads */
@@ -90,7 +102,8 @@
   background: linear-gradient(to bottom, transparent, var(--antique-gold), transparent);
   opacity: 0.3;
   animation: floatThread 20s infinite linear;
-  filter: drop-shadow(0 0 5px var(--antique-gold)); /* Glowing threads */
+  filter: drop-shadow(0 0 5px var(--antique-gold));
+  /* Glowing threads */
 }
 
 .decorativeElements::before {
@@ -107,14 +120,22 @@
 }
 
 @keyframes floatThread {
-  0% { transform: translate(0, 0) rotate(20deg); }
-  50% { transform: translate(15px, 30px) rotate(21deg); }
-  100% { transform: translate(0, 0) rotate(20deg); }
+  0% {
+    transform: translate(0, 0) rotate(20deg);
+  }
+
+  50% {
+    transform: translate(15px, 30px) rotate(21deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(20deg);
+  }
 }
 
 .header {
   text-align: center;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
   padding: 0 5%;
   position: relative;
   z-index: 10;
@@ -126,7 +147,8 @@
 .title {
   font-size: 3.8rem;
   font-family: var(--font-bodoni), var(--font-cormorant), serif;
-  color: var(--antique-gold); /* Gold title for dark theme */
+  color: var(--antique-gold);
+  /* Gold title for dark theme */
   margin-bottom: 15px;
   letter-spacing: -1px;
   font-weight: 500;
@@ -138,7 +160,8 @@
 .subtitle {
   font-family: var(--font-cormorant), serif;
   font-size: 1.1rem;
-  color: #d1c8c0; /* Ivory/Sand subtitle */
+  color: #d1c8c0;
+  /* Ivory/Sand subtitle */
   opacity: 0.8;
   max-width: 550px;
   margin: 0 auto 25px;
@@ -176,19 +199,21 @@
   height: 100%;
   cursor: pointer;
   transform-style: preserve-3d;
-  will-change: transform, opacity; /* Hardware acceleration hint */
+  will-change: transform, opacity;
+  /* Hardware acceleration hint */
 }
 
 .imageBox {
   width: 100%;
   height: 100%;
-  border-radius: 160px 160px 15px 15px; 
+  border-radius: 160px 160px 15px 15px;
   overflow: hidden;
-  box-shadow: 0 25px 70px rgba(0,0,0,0.6); /* Deeper shadow for dark mode */
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+  /* Deeper shadow for dark mode */
   position: relative;
   background-color: #1a1512;
   border: 1px solid rgba(198, 167, 105, 0.3);
-  transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 1.2s ease, border-color 1.2s ease;
 }
 
 .ornamentalOverlay {
@@ -211,8 +236,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.6) brightness(0.7) contrast(1.1); /* Grittier, dark-gallery feel */
-  transition: all 1.2s ease;
+  filter: saturate(0.6) brightness(0.7) contrast(1.1);
+  /* Grittier, dark-gallery feel */
+  transition: transform 1.2s ease, filter 1.2s ease;
   transform: scale(1.05);
 }
 
@@ -223,7 +249,7 @@
 
 .active .imageBox {
   border-color: var(--antique-gold);
-  box-shadow: 0 0 40px rgba(198, 167, 105, 0.15), 0 30px 80px rgba(0,0,0,0.8);
+  box-shadow: 0 0 40px rgba(198, 167, 105, 0.15), 0 30px 80px rgba(0, 0, 0, 0.8);
 }
 
 .floatingLabel {
@@ -233,23 +259,25 @@
   transform: translateX(-50%);
   width: 85%;
   padding: 18px 12px;
-  background: rgba(15, 13, 12, 0.9); /* Darker label */
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background: rgba(15, 13, 12, 0.95);
+  /* GPU Fix: remove blur on inactive cards, only apply to active */
   border-radius: 12px;
   border: 1px solid rgba(198, 167, 105, 0.4);
   color: var(--white);
   text-align: center;
   z-index: 5;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
   transition: all 0.8s ease;
 }
 
 .active .floatingLabel {
-  background: var(--deep-maroon);
+  background: rgba(122, 31, 42, 0.85);
+  /* Deep Maroon */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border-color: var(--antique-gold);
   transform: translateX(-50%) translateY(-8px);
-  box-shadow: 0 20px 45px rgba(122, 31, 42, 0.5);
+  box-shadow: 0 15px 35px rgba(122, 31, 42, 0.4);
 }
 
 .artisanName {
@@ -259,7 +287,7 @@
   font-weight: 500;
   letter-spacing: 0.5px;
   color: var(--white);
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .labelDivider {
@@ -289,8 +317,9 @@
   .section {
     padding: 20px 0;
   }
-  
-  .patternLeft, .patternRight {
+
+  .patternLeft,
+  .patternRight {
     width: 300px;
     height: 500px;
     opacity: 0.05;
@@ -301,17 +330,20 @@
   .title {
     font-size: 2.2rem;
   }
-  
+
   .carouselInner {
     width: 240px;
     height: 340px;
   }
-  
+
   .imageBox {
     border-radius: 120px 120px 12px 12px;
   }
-  
-  .patternLeft, .patternRight, .quoteLeft, .quoteRight {
+
+  .patternLeft,
+  .patternRight,
+  .quoteLeft,
+  .quoteRight {
     display: none;
   }
 }
