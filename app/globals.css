@@ -1,13 +1,19 @@
 /* Locomotive Scroll Base */
 :root {
-  --heritage-ivory: #E8DCC8; /* Royal Sand Heritage Beige */
-  --deep-maroon: #7A1F2A; /* Primary Luxury Maroon */
-  --heritage-indigo: #1E2A44; /* Deep Indigo Accent */
-  --antique-gold: #C6A769; /* Rich Antique Gold */
-  --sandstone-beige: #D9C5B2; 
-  --charcoal-black: #2A2A2A; /* Darker charcoal text */
+  --heritage-ivory: #E8DCC8;
+  /* Royal Sand Heritage Beige */
+  --deep-maroon: #7A1F2A;
+  /* Primary Luxury Maroon */
+  --heritage-indigo: #1E2A44;
+  /* Deep Indigo Accent */
+  --antique-gold: #C6A769;
+  /* Rich Antique Gold */
+  --sandstone-beige: #D9C5B2;
+  --charcoal-black: #2A2A2A;
+  /* Darker charcoal text */
   --white: #ffffff;
-  --footer-bg: #1a1512; /* Rich dark brown, warmer than charcoal */
+  --footer-bg: #1a1512;
+  /* Rich dark brown, warmer than charcoal */
   --gold-soft: rgba(198, 167, 105, 0.15);
 }
 
@@ -20,7 +26,8 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow-x: clip;
+  /* clip instead of hidden allows sticky elements globally */
   background-color: var(--heritage-ivory);
   color: var(--charcoal-black);
   font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
@@ -48,7 +55,12 @@ html.lenis body {
   pointer-events: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-playfair), serif;
   color: var(--deep-maroon);
   font-weight: 500;
@@ -57,13 +69,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes fadeInScale {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes slideRight {
-  from { transform: translateX(-20px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 a {
@@ -75,4 +101,29 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+}
+
+/* Custom Sexy Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--heritage-ivory);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--heritage-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #A38A58;
+  /* Premium gold tint */
+  border-radius: 10px;
+  border: 2px solid var(--heritage-ivory);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--deep-maroon);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
 }

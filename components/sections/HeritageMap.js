@@ -15,24 +15,24 @@ const HeritageMap = () => {
         <div className={styles.content}>
           <ScrollReveal y={20}>
             <h3 className={styles.overhead}>THE SOURCE OF STRENGTH</h3>
-            <h2 className={styles.title}>The Kutch<br/>Heritage</h2>
+            <h2 className={styles.title}>The Indian<br />Heritage</h2>
             <p className={styles.text}>
-              Rooted in the rugged landscapes of Gujarat, Kutch is the heart of IKATVA. Every craft is a witness to the resilience and artistry of its people.
+              Rooted in the rugged landscapes of Gujarat, Kutch is the genesis of IKATVA. From this heartland, our mission expands to celebrate the finest traditional handcrafted arts across India.
             </p>
           </ScrollReveal>
         </div>
         <div className={styles.mapWrapper}>
           <ScrollReveal y={0} duration={1.5}>
             <div className={styles.mapContainer}>
-              <img 
-                src="/images/kutch_map.png" 
-                alt="Map of Kutch Crafts" 
+              <img
+                src="/images/kutch_map.png"
+                alt="Map of Kutch Crafts"
                 className={styles.mapImage}
               />
               {origins.map((o, i) => (
-                <div 
-                  key={i} 
-                  className={styles.marker} 
+                <div
+                  key={i}
+                  className={styles.marker}
                   style={{ left: o.x, top: o.y }}
                 >
                   <div className={styles.dot}></div>

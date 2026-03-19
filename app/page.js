@@ -3,6 +3,7 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Hero from '../components/sections/Hero';
+import ImpactSection from '../components/sections/ImpactSection';
 import CategoryNav from '../components/sections/CategoryNav';
 import MediaLogos from '../components/sections/MediaLogos';
 import CategoryGrid from '../components/sections/CategoryGrid';
@@ -24,6 +25,7 @@ export default function Home() {
       <Navbar />
       <main className={styles.main}>
         <div><Hero /></div>
+        <div><ImpactSection /></div>
         <div><CategoryNav /></div>
         <div><CategoryGrid /></div>
         <div><ArtisanSection /></div>

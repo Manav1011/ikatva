@@ -1,0 +1,118 @@
+.impactWrapper {
+    padding: 80px 6%;
+    background-color: var(--white);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.eyebrowLine {
+    height: 1px;
+    width: 60px;
+    background-color: var(--antique-gold);
+}
+
+.headline {
+    font-family: var(--font-playfair), serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--deep-maroon);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.card {
+    text-align: center;
+    padding: 40px 30px;
+    background-color: var(--heritage-ivory);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--antique-gold);
+    opacity: 0.2;
+    margin: 10px;
+    pointer-events: none;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.cardIcon {
+    font-size: 1.8rem;
+    color: var(--antique-gold);
+    margin-bottom: 20px;
+}
+
+.cardTitle {
+    font-family: var(--font-cormorant), serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--charcoal-black);
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.cardDescription {
+    font-family: var(--font-cormorant), serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--charcoal-black);
+    opacity: 0.85;
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .impactWrapper {
+        padding: 60px 5%;
+    }
+
+    .headline {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .eyebrowLine {
+        width: 30px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
