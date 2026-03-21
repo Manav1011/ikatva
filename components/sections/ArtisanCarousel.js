@@ -74,8 +74,8 @@ const ArtisanCarousel = () => {
       <div className={styles.decorativeElements}>
         <div className={styles.patternLeft}></div>
         <div className={styles.patternRight}></div>
-        <div className={styles.quoteLeft}>"Preserving the thread of the past..."</div>
-        <div className={styles.quoteRight}>"...weaving the fabric of the future."</div>
+        <div className={styles.quoteLeft}>"Crafted Heritage,"</div>
+        <div className={styles.quoteRight}>"Global Luxury"</div>
       </div>
 
       <div className={styles.header}>
