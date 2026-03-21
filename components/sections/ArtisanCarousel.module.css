@@ -1,6 +1,6 @@
 .section {
   min-height: 85vh;
-  background-color: #0d0b0a;
+  background-color: #1a3b2b;
   /* Deep charcoal midnight */
   background-image:
     radial-gradient(circle at 50% 50%, rgba(122, 31, 42, 0.15) 0%, transparent 70%),

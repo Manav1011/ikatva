@@ -1,6 +1,7 @@
 .section {
   padding: 140px 8% 180px;
-  background-color: #12100e; /* Deep Charcoal-Brown for high luxury contrast */
+  background-color: #0f291e;
+  /* Deep Green for matching theme */
   position: relative;
   overflow: hidden;
   color: var(--heritage-ivory);
@@ -77,10 +78,21 @@
 }
 
 /* Staggered vertical positioning */
-.card1 { transform: translateY(0); }
-.card2 { transform: translateY(60px); }
-.card3 { transform: translateY(-30px); }
-.card4 { transform: translateY(30px); }
+.card1 {
+  transform: translateY(0);
+}
+
+.card2 {
+  transform: translateY(60px);
+}
+
+.card3 {
+  transform: translateY(-30px);
+}
+
+.card4 {
+  transform: translateY(30px);
+}
 
 .imageWrapper {
   position: relative;
@@ -89,7 +101,7 @@
   margin-bottom: 35px;
   overflow: hidden;
   border: 1px solid rgba(198, 167, 105, 0.2);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
 .image {
@@ -139,7 +151,8 @@
 .cardText {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: rgba(232, 220, 200, 0.7); /* Muted Ivory */
+  color: rgba(232, 220, 200, 0.7);
+  /* Muted Ivory */
   font-weight: 300;
 }
 
@@ -159,7 +172,11 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 80px 40px;
   }
-  .card1, .card2, .card3, .card4 {
+
+  .card1,
+  .card2,
+  .card3,
+  .card4 {
     transform: none;
   }
 }
@@ -169,6 +186,7 @@
     grid-template-columns: 1fr;
     gap: 60px;
   }
+
   .title {
     font-size: 2.8rem;
   }
