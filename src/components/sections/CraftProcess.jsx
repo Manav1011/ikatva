@@ -1,5 +1,3 @@
-'use client';
-import Image from 'next/image';
 import styles from './CraftProcess.module.css';
 import ScrollReveal from '../ScrollReveal';
 
@@ -52,7 +50,7 @@ const CraftProcess = () => {
           <div key={i} className={`${styles.stepCard} ${styles[`card${i + 1}`]}`}>
             <ScrollReveal y={40} stagger={0} delay={i * 0.2}>
               <div className={styles.imageWrapper}>
-                <Image src={s.image} alt={s.title} width={400} height={500} className={styles.image} />
+                <img src={s.image} alt={s.title} width="400" height="500" className={styles.image} />
                 <div className={styles.numberBadge}>{s.step}</div>
               </div>
               <div className={styles.content}>

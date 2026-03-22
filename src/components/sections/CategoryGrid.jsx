@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import styles from './CategoryGrid.module.css';
 
 const categories = [
@@ -15,7 +15,7 @@ const CategoryGrid = () => {
       <div className={styles.grid}>
         {categories.map((cat, idx) => (
           <Link 
-            href={cat.link} 
+            to={cat.link} 
             key={idx} 
             className={styles.card}
           >

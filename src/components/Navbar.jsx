@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import IconSearch from './icons/IconSearch';
 import IconUser from './icons/IconUser';
 import IconCart from './icons/IconCart';
@@ -12,13 +12,13 @@ const Navbar = () => {
       </div>
       <nav className={styles.nav}>
         <div className={styles.logo}>
-          <Link href="/">IKATVA</Link>
+          <Link to="/">IKATVA</Link>
         </div>
         <ul className={styles.navLinks}>
-          <li><Link href="/shop">Shop</Link></li>
-          <li><Link href="/collections">Collections</Link></li>
-          <li><Link href="/heritage">Our Heritage</Link></li>
-          <li><Link href="/stories">Artisan Stories</Link></li>
+          <li><Link to="/shop">Shop</Link></li>
+          <li><Link to="/collections">Collections</Link></li>
+          <li><Link to="/heritage">Our Heritage</Link></li>
+          <li><Link to="/stories">Artisan Stories</Link></li>
         </ul>
         <div className={styles.actions}>
           <button className={styles.iconBtn} aria-label="Search"><IconSearch /></button>
