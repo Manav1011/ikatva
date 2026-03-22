@@ -14,9 +14,15 @@ const CategoryGrid = () => {
       <h2 className={styles.sectionTitle}>Featured Collections</h2>
       <div className={styles.grid}>
         {categories.map((cat, idx) => (
+<<<<<<< HEAD:src/components/sections/CategoryGrid.jsx
           <Link 
             to={cat.link} 
             key={idx} 
+=======
+          <Link
+            href={cat.link}
+            key={idx}
+>>>>>>> befc2ce12d36000697c8e799bb69070ca9e116f0:components/sections/CategoryGrid.js
             className={styles.card}
           >
             <div className={styles.imageWrapper}>

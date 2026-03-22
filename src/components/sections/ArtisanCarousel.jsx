@@ -26,7 +26,7 @@ const ArtisanCarousel = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 2500); // Slightly slower tick for better breathing
+    const interval = setInterval(nextSlide, 3500); // More breathing room between slides
     return () => clearInterval(interval);
   }, []);
 
@@ -43,8 +43,8 @@ const ArtisanCarousel = () => {
       if (position < -total / 2) adjustedPosition += total;
 
       const absPosition = Math.abs(adjustedPosition);
-      
-      const translateX = adjustedPosition * 340; 
+
+      const translateX = adjustedPosition * 340;
       const rotateY = adjustedPosition * -12;
       const translateZ = absPosition * -60;
       const scale = 1 - absPosition * 0.05;
@@ -52,14 +52,14 @@ const ArtisanCarousel = () => {
       const zIndex = 100 - Math.round(absPosition * 10);
 
       gsap.to(card, {
-        duration: 2,
+        duration: 1.2,
         x: translateX,
         z: translateZ,
         rotateY: rotateY,
         scale: scale,
         opacity: opacity,
         zIndex: zIndex,
-        ease: "power2.inOut", // Smoother than linear for state changes
+        ease: "power2.inOut", // Smoother interaction
         overwrite: "auto",
       });
     });
@@ -74,8 +74,8 @@ const ArtisanCarousel = () => {
       <div className={styles.decorativeElements}>
         <div className={styles.patternLeft}></div>
         <div className={styles.patternRight}></div>
-        <div className={styles.quoteLeft}>"Preserving the thread of the past..."</div>
-        <div className={styles.quoteRight}>"...weaving the fabric of the future."</div>
+        <div className={styles.quoteLeft}>"Crafted Heritage,"</div>
+        <div className={styles.quoteRight}>"Global Luxury"</div>
       </div>
 
       <div className={styles.header}>
